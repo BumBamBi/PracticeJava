@@ -1,6 +1,5 @@
 package Algorithm.BOJ.q1463;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
