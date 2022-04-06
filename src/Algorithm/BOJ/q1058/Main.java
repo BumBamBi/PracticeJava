@@ -10,7 +10,7 @@ public class Main {
 
         N = sc.nextInt();
 
-        ArrayList<Integer> list = new ArrayList<Integer>()[10];
+        ArrayList<Integer> list = new ArrayList<Integer>();
 
         
 
