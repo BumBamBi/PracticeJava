@@ -1,4 +1,4 @@
-package Algorithm.SWEA.q17471;
+package Algorithm.BOJ.q17471;
 
 import java.util.LinkedList;
 import java.util.Queue;
