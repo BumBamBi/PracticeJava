@@ -1,4 +1,4 @@
-package Algorithm.BOJ.q1058;
+package Algorithm.BOJ.q1058_yet;
 
 import java.util.ArrayList;
 import java.util.Scanner;
