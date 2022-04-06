@@ -29,12 +29,14 @@ public class Main {
                 adjMatrix[taller][smaller] = -1;
             }
             
+            // 모든 정점 기준으로 보다크고 작은 노드 찾기
             for (int i = 1; i <= N; i++) {
                 cnt = 0;
 
                 bfs(i, 1);  // 보다 큰 노드 찾기
                 bfs(i, -1); // 보다 작은 노드 찾기
 
+                // 모든 노드 수만큼 카운트 된다면 자신의 키 순서를 알 수 있음
                 // 자기 자신이 두번 더해짐
                 if (cnt - 1 == N) {
                     answer++;
