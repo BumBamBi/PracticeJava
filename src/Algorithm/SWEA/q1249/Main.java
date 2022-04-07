@@ -1,4 +1,4 @@
-package Algorithm.SWEA.q1249_yet;
+package Algorithm.SWEA.q1249;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -33,7 +33,7 @@ public class Main {
             for (int i = 0; i < N; i++) {
                 String s = sc.next();
                 for (int j = 0; j < N; j++) {
-                    map[i][j] = s.charAt(j);
+                    map[i][j] = s.charAt(j)-'0';
                 }
             }
             // ------------------------------------------
