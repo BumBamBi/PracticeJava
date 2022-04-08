@@ -5,8 +5,6 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Main {
-
-
     static int N, M, D;
     static int[][] map;
     static boolean[][] visited;
@@ -14,12 +12,12 @@ public class Main {
     
     static int remainTargetsCnt;
     static int answer;
-    
 
     // 좌/상/우
     static final int[] dy = { 0, -1, 0 };
     static final int[] dx = { -1, 0, 1 };
 
+    // 잡을 타겟이 없다는 것을 표시할 상수
     static final int NO_TARGET = -1;
     
     public static void main(String[] args) {
@@ -39,8 +37,9 @@ public class Main {
                 }
             }
         }
-
+        
         // 궁수의 위치를 설정
+        // 해당 궁수 위치일 때, 시뮬레이션 수행
         dfs(0, 0);
 
         System.out.println(answer);
@@ -64,11 +63,11 @@ public class Main {
     }
 
     private static void simulate() {
-        int remainCnt = remainTargetsCnt;
         int[][] copyMap = copyMap();
+        int remainCnt = remainTargetsCnt;
         int getTargets = 0;
-
         int turn = 0;
+        
         while (remainCnt > 0) {
             int[][] targets = new int[3][2];
             int idx = 0;
