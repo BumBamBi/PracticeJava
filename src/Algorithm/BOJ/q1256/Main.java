@@ -1,5 +1,7 @@
 package Algorithm.BOJ.q1256;
 
+// 참고 : https://arinnh.tistory.com/70
+
 import java.util.Scanner;
 
 public class Main {
