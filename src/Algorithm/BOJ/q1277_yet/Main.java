@@ -62,30 +62,6 @@ public class Main {
         PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
         // 자기 자신으로 가는 비용x
         distance[start] = 0;
-        pq.offer(new Node(start, 0));
-
-        // 큐를 계속 돌리면서 확인
-        while(!pq.isEmpty() && remainedVertexCnt > 0){
-            Node current = pq.poll();
-
-            // 이미 방문했으면 PASS
-            if(visited[current.id]){
-                continue;
-            }
-            visited[current.id] = true;
-            remainedVertexCnt--;
-
-            // 해당 정점과 연결된 간선들을 전부 확인
-            int len = adjList.get(current.id).size();
-            for (int i = 0; i<len; i++) {
-                Node next = adjList.get(current.id).get(i);
-                
-                // 4. cost가 더 작을때만 갱신하고 PQ에 넣기
-                if (current.cost + next.cost < distance[next.id]) {
-                    distance[next.id] = current.cost + next.cost;
-                    pq.add(new Node(next.id, distance[next.id]));
-                }
-            }
-        }
+        
     }
 }
