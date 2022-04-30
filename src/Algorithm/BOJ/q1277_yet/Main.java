@@ -1,4 +1,4 @@
-package Algorithm.BOJ.q1277;
+package Algorithm.BOJ.q1277_yet;
 
 import java.util.ArrayList;
 import java.util.Arrays;
