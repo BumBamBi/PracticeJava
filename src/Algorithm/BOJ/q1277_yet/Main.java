@@ -2,7 +2,6 @@ package Algorithm.BOJ.q1277_yet;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Main {
@@ -59,9 +58,9 @@ public class Main {
     }
     
     static void djkstra(int start){
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+        // PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
         // 자기 자신으로 가는 비용x
-        distance[start] = 0;
+        // distance[start] = 0;
         
     }
 }
