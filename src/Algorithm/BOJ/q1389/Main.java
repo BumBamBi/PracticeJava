@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     static int N, M;
+    static boolean[][] matrix;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -11,8 +12,21 @@ public class Main {
         N = sc.nextInt();
         M = sc.nextInt();
         
-        // 그래프 이론 혹은
-        // 플루이드와샬
+        matrix = new boolean[N][N];
+
+        for (int i = 0; i < M; i++) {
+            int from = sc.nextInt();
+            int to = sc.nextInt();
+
+            matrix[from][to] = true;
+            matrix[to][from] = true;
+        }
+
+        for (int i = 0; i < N; i++) {
+            boolean[] flag = new boolean[N]; // boolean? int?
+
+
+        }
 
         sc.close();
     }
