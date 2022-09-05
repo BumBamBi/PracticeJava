@@ -25,7 +25,7 @@ public class Main {
         for (int i = 0; i < N; i++) {
             boolean[] flag = new boolean[N]; // boolean? int?
 
-
+            func();
         }
 
         sc.close();
