@@ -16,8 +16,8 @@ public class Main {
         N = sc.nextInt();
         M = sc.nextInt();
 
+        // ArrayList[] 로 선언하기
         graph = new ArrayList[N];
-        
         for(int i=0; i<N; i++){
             graph[i] = new ArrayList<Integer>();
         }    
