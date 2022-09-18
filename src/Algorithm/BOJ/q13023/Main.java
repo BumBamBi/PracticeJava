@@ -6,7 +6,7 @@ public class Main {
     
     static int N;
     static int M;
-    static boolean[][] matrix;
+    static ArrayList<Integer>[] graph;
     static boolean[] visited;
     static int ans = 0;
 
@@ -16,15 +16,18 @@ public class Main {
         N = sc.nextInt();
         M = sc.nextInt();
 
-        matrix = new boolean[N][N];
+        graph = new ArrayList[N];
+        
+        for(int i=0; i<N; i++){
+            graph[i] = new ArrayList<Integer>();
+        }    
 
         for (int i = 0; i < M; i++) {
             int from = sc.nextInt();
             int to = sc.nextInt();
 
-            matrix[from][to] = true;
-            matrix[to][from] = true;
-
+            graph[from].add(to);
+            graph[to].add(from);
         }
         
         for(int i=0; i<N; i++){
@@ -41,18 +44,16 @@ public class Main {
     }
 
     private static void func(int cur, int cnt) {
-        if(cnt == 4){
+        if(cnt == 5){
             ans = 1;
             return;
         }
 
         visited[cur] = true;
 
-        for(int i=0; i<N; i++){
-            if (matrix[cur][i] == true) {
-                if(visited[i] == false){
-                    func(i, cnt+1);
-                }
+        for (int linkedNode : graph[cur]) {
+            if(visited[linkedNode] == false){
+                func(linkedNode, cnt+1);
             }
         }
         visited[cur] = false;
